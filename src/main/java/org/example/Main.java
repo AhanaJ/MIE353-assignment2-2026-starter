@@ -102,7 +102,7 @@ public class Main {
 
   public static void exportGraduateCourses() throws SQLException {
     CMS.addSqlChange(ctx -> {
-      ExportGraduateCourses.execute(ctx);
+      ExportGradCourses.execute(ctx);
     });
     CMS.commit();
   }

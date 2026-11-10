@@ -11,5 +11,5 @@ COPY(
     INNER JOIN student AS s2 ON s2.studentId = tr2.studentId
     GROUP BY s1.firstName, s1.lastName, s2.firstName, s2.lastName, s1.studentId, s2.studentId
     HAVING COUNT(*) >= 3
-    ORDER BY student1Name, studen2Name, s1.studentId, s2.studentId
+    ORDER BY student1Name, student2Name, s1.studentId, s2.studentId
 )TO 'src/main/resources/data/output/Query7.csv'

@@ -1,6 +1,6 @@
 COPY(
     SELECT CONCAT(s.firstName,' ', s.lastName) as studentName
-    FROM students AS s
+    FROM student AS s
     WHERE EXISTS( 
         SELECT 1 FROM transcript AS tr 
         INNER JOIN course AS c on c.courseId = tr.courseId
